@@ -1,0 +1,26 @@
+fun main() {
+    val usuarios = mapOf(
+        1001 to "Ana ",
+        1002 to "Bruno",
+        1003 to "Maria",
+        1004 to "Diego"
+    )
+
+    println("Diretorio de Usuarios carregado")
+    print("Digite o ID: ")
+
+    val entrada = readln()
+    val id = entrada.toIntOrNull()
+
+    if (id != null) {
+        val resultado = usuarios[id]
+
+        if (resultado != null) {
+            println("Usuario: $resultado")
+        } else {
+            println("Resultado: Usuario nao encontrado")
+        }
+    } else {
+        println("Erro: Entrada invalida")
+    }
+}
